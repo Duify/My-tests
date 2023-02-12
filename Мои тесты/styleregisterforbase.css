@@ -1,0 +1,271 @@
+html,body {
+    font-family: Arial, Helvetica, san;
+    /*display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;*/
+    overflow: hidden;
+    height:100%;
+    margin:0;
+    background-color: hsl(214, 59%, 92%);
+}
+
+.bg{
+  height:100%;
+  width:100%;
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom, rgba(24, 25, 29, 0.52), rgba(85, 19, 82, 0.73)),url(background.jpg);
+  background-repeat: no-repeat;
+  opacity: 100%;
+  background-size: cover;
+  background-position:center center;
+  
+}
+    
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow:0 0 10px rgb(181, 183, 219);
+  width:800px;
+  height:450px;
+  padding:20px 30px;
+
+}
+
+.container p{
+  position: relative;
+  left:745px;
+  text-decoration:underline;
+}
+h2 {
+  color:#ffffff;
+  position:absolute;
+  top: 5%;
+  left: 43%;
+    text-align:center;
+    text-shadow:0 0 15px rgb(0, 0, 0,0.5);
+}
+h3 {
+  color:#ffffff;
+  position:absolute;
+  top: 10%;
+  left: 42%;
+    text-align:center;
+    text-align:center;
+    text-shadow:0 0 15px rgb(0, 0, 0,0.5);
+}
+
+/*input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 23px 0;
+    display: inline-block;
+    border: 1px solid rgb(10, 6, 6);
+    box-sizing: border-box;
+    border-radius: 5px;
+  } */
+  
+  button {
+    background-color: #308aad;
+    color: white;
+    padding: 14px 20px;
+    margin: 19px 0;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    border-radius:30px;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  button:active{
+    transform:scale(1.03)
+  }
+  
+  .switch{
+    position:absolute;
+    right:100px;
+    display:flex;
+    /*border-bottom: 1px solid rgb(255, 255, 255);*/
+  }
+  .switch:after{
+    content:"";
+    height:5px;
+    width:80px;
+    background:rgb(38, 191, 252);
+    border-radius:60px 60px 0 0;
+    position:absolute;
+    bottom:0;
+    left:8px;
+    transition: 0.3s ease;
+  }
+
+  .switch.active:after{
+    left:98px;
+    width:130px;
+    background:rgb(38, 191, 252);
+  }
+
+  .switch.active{
+   /* border-bottom: 1px solid rgb(38, 191, 252);*/
+  }
+
+  .login{
+    padding:5px 12px;
+    cursor:pointer;
+  }
+  .signup{
+    padding:5px 12px;
+    cursor:pointer;
+  }
+  
+  .container .outer{
+    position:relative;
+    left:450px;
+    width:50%;
+    margin-top:70px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .outer #forma{
+    width:100%;
+    position:relative;
+    display:flex;
+    margin:auto;
+    transition: 0.2 ease-in-out;
+  }
+  #page1{
+    margin:auto;
+    width:100%;
+    position:relative;
+    top:0px;
+    left:0px;
+  }
+  label{
+    display:block;
+    margin-top: 19px;
+    padding:1px 15px;
+    text-align:center;
+    letter-spacing: 1px;
+  }
+
+  .element{
+    position:relative;
+  }
+  .element input{
+    text-align: center;
+    width:70%;
+    height:25px;
+    margin:2px;
+    border-radius: 4px;
+    border:1px solid rgb(67, 97, 196);
+    font-size: 15px;
+  }
+
+.logo{
+  z-index: 1;
+  position:relative;
+  bottom:5%;
+  left: 5%;
+  opacity: 100%;
+  border-radius: 10px;
+  width:370px;
+  height:350px;
+  padding:20px 30px;
+  overflow: hidden;
+  background-color: hsl(211, 51%, 89%);
+}
+
+.logo img{
+  width:500px;
+  position:absolute;
+  z-index: 1;
+  top:100px;
+  right:0px;
+  
+}
+.contwithlogo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  opacity: 93%;
+  width:850px;
+  height:350px;
+}
+
+
+
+
+svg{
+  position:absolute;
+  right:280px;
+  top:110px;
+  overflow:hidden;
+  width:170px;
+  z-index: 2;
+}
+
+
+
+#Голова,
+#Глаз1,
+#Глаз2,
+#Рука_правая_1_ {
+    transform-box:fill-box;
+}
+
+#Голова{
+    animation: Голова ease-in-out 1.6s infinite alternate;
+    transform-origin: bottom; 
+}
+@keyframes Голова{
+    0% {transform:rotate(3.5deg)}
+}
+#Рука_правая_1_{
+    animation: Рука1 ease-in-out 1.6s infinite alternate;
+    transform-origin: top; 
+}
+@keyframes Рука1{
+    0% {transform:rotate(1deg)}
+}
+#Рука_правая{
+    animation: Рука ease-in-out 1.6s infinite alternate;
+    transform-origin: center; 
+}
+@keyframes Рука{
+    0% {transform:rotate(2deg)}
+}
+
+#Глаз1,
+#Глаз2{   animation: Моргает step-end 7s infinite both;
+    transform-origin:center; 
+}
+@keyframes Моргает{
+    from,to,10%,25%,80%
+    {
+        transform: scaleY(1);
+    }
+    8%,23%,78%
+    {
+        transform: scaleY(0.1);
+    }
+}
+
+.text{
+  font-family:Arial, Helvetica, sans-serif;
+    position:absolute;
+    left:70px;
+    top:0px;
+    overflow:hidden;
+    width:200px;
+    z-index: 2;
+    text-shadow:0 0 4px rgb(0, 0, 0,0.5);
+  }
+

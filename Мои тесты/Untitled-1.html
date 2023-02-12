@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои тесты</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styleregister.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/gh/guillaumepotier/Parsley.js@2.9.1 /dist/parsley.js"> </script>
+    
+</head>
+<body>
+    <div class="bg">
+    </div>
+    <h2> Добро пожаловать </h2>
+    <h3> Это страница администратора </h3>
+    <div class="contwithlogo">
+
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        
+        <div class="container">
+            <p> Зарегистрировать</p>
+            <div class="switch">
+                <div class="login" onclick="tab1();">Студента</div>
+                <div class="signup" onclick="tab2();">Преподавателя</div>
+            </div>
+            <div class="outer">
+
+            <div id="form">
+
+            <div id="page1">
+            <form action="" method="post">
+            <label for="username"><b>Логин</b></label>
+            <div class="element">
+            <input type="text" placeholder="Введите ваш логин" name="username" required>
+            </div>
+            <label for="password"><b>Пароль</b></label>
+            <div class="element">
+            <input type="password" placeholder="Введите пароль" name="password" required>
+            </div>
+            <button type="submit">Войти</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+            </label>
+            </form>
+            </div>
+
+            <div id="page1">
+             <form action="" method="post" id="admin_register_form">
+            <label for="name"><b>Ваше имя</b></label>
+            <div class="element">
+            <input type="text" placeholder="Введите ваше имя" name="name" required>
+             </div>
+
+             <label for="family"><b>Ваша фамилия</b></label>
+            <div class="element">
+            <input type="text" placeholder="Введите вашу фамилию" name="family" required>
+             </div>
+
+             <label for="otch"><b>Ваше отчество</b></label>
+            <div class="element">
+            <input type="text" placeholder="Введите ваше отчество" name="otch" >
+             </div>
+             
+            <label for="username"><b>Почта</b></label>
+            <div class="element"> 
+            <input type="text" placeholder="Введите вашу электронную почту" name="admin_email_address" id="admin_email_address" required>
+            </div>
+
+            <label for="password"><b>Пароль</b></label>
+            <div class="element"> 
+            <input type="password" placeholder="Введите пароль" name="admin_password" id="admin_password" required>
+            </div>
+
+            <div class="element">
+                <input type="hidden" name="page" value="register">
+                <input type="hidden" name="action" value="register">
+            </div> 
+            
+            <button type="submit" name="admin_register" id="admin_register" value="Register"> Зарегистрироваться</button>
+        </form>
+            </div>
+        </div>
+        </div>
+    </div> 
+</div>
+    
+    <script>
+
+
+
+
+        const login = document.querySelector(".login");
+        const signup = document.querySelector(".signup");
+        const form = document.querySelector("#form");
+        const switchs = document.querySelectorAll(".switch");
+
+        let current=1;
+
+        function tab2(){
+            form.style.marginLeft = "-100%";
+            switchs[current-1].classList.add("active");
+        }
+        function tab1(){
+            form.style.marginLeft = "0";
+            switchs[current-1].classList.remove("active");
+        }
+    </script>
+</body>
+</html>
